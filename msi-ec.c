@@ -3395,6 +3395,7 @@ static struct msi_ec_conf CONF47 __initdata = {
 static const char *ALLOWED_FW_48[] __initconst = {
 	"158NIMS1.10D", // Bravo 15 C7UCX
 	"158NIMS1.30C", // Bravo 15 C7VFKP
+	"158NIMS1.505", // Katana A15 AI B8VF
 	NULL
 };
 
@@ -3937,7 +3938,7 @@ static const char *ALLOWED_FW_56[] __initconst = {
 	NULL
 };
 
-static struct msi_ec_conf CONF56 __initdata = {
+/* static struct msi_ec_conf CONF56 __initdata = {
 	.allowed_fw = ALLOWED_FW_56, // WMI2 based
 	.charge_control_address = 0xd7,
 	// .usb_share = {
@@ -4003,8 +4004,8 @@ static struct msi_ec_conf CONF56 __initdata = {
 		.state_base_value = 0x80,
 		.max_state        = 3,
 	},
-};
-
+}; 
+*/
 
 static struct msi_ec_conf *CONFIGURATIONS[] __initdata = {
 	&CONF0,
@@ -4063,7 +4064,7 @@ static struct msi_ec_conf *CONFIGURATIONS[] __initdata = {
 	&CONF53,
 	&CONF54,
 	&CONF55,
-	&CONF56,
+	// &CONF56,
 	NULL
 };
 
